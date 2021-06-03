@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home | Noel Varghese Oommen</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="C:\Users\noelo\Desktop\Portfolio-Website\java script.js"></script>
+
+
+</head>
+<body style="background-image: url('main.jpg');">
+
+<header style="background-image: url('black marble.jpg');">
+  <h2>Noel Varghese Oommen</h2>
+</header>
+<button class="tablink" onclick="openPage('Home', this, 'teal')"id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Experience', this, 'indigo')" >
+Experience</button>
+<button class="tablink" onclick="openPage('Contact', this, 'orange')">Contact</button>
+<button class="tablink" onclick="openPage('Gallery', this, 'black')">Gallery</button>
+
+<div id="Home" align="center" class="tabcontent">
+  <h3>Home</h3>
+  <img src="my photo.jpeg"  alt="noel's picture" style="height:350px;width:300px;" class="img-fluid">
+    <div class="container">
+    <h1>Skill Set</h1>
+    <div class="bar learning" data-skill="C/C++"></div>
+    <div class="bar back basic" data-skill="java"></div>
+    <div class="bar back intermediate" data-skill="CSS/HTML"></div>
+    <div class="bar front advanced" data-skill="UNITY"></div>
+    <div class="bar front expert" data-skill="Python"></div>
+
+  </div>
+</div>
+
+<div id="Experience"  align="center" class="tabcontent">
+  <h3>Experience</h3>
+  <p> i have been working on cs for a while now</p>
+  <p>next line i guess</p>
+</div>
+
+<div id="Contact" align="center" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="Gallery" align="center" class="tabcontent">
+  <h3>Gallery</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<footer>
+  <p>Made by Noel Varghese Oommen 2021</p>
+</footer>
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
